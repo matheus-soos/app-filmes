@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00000097;
+    padding: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+p {
+    color: #ffffff;
+}
+
+#name {
+    font-size: 24px;
+}
+
+#duration {
+    font-size: 18px;
+}
+
+img {
+    width: 150px;
+    height: 220px;
+}

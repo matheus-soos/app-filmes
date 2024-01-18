@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Criar Usuário</h2>
+
+    <form [formGroup]="formUser">
+        <div class="form-row">
+            <mat-form-field>
+                <mat-label>Username:</mat-label>
+                <input autocomplete="username" matInput type="text" formControlName="username">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password:</mat-label>
+                <input autocomplete="current-password" matInput type="password" formControlName="password">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>E-mail:</mat-label>
+                <input matInput type="text" formControlName="email">
+            </mat-form-field>
+        </div>
+
+        <div class="form-row">
+            <mat-form-field>
+                <mat-label>Gênero:</mat-label>
+                <mat-select formControlName="genero">
+                    <mat-option [value]="undefined"></mat-option>
+                    <mat-option value="M">Masculino</mat-option>
+                    <mat-option value="F">Feminino</mat-option>
+                </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Idade:</mat-label>
+                <input matInput type="number" formControlName="idade">
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Data de Nascimento:</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="data_nascimento">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </form>
+
+    <button mat-button (click)="onCadastrar()">Cadastrar</button>
+</div>
